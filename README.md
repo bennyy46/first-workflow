@@ -1,1 +1,19 @@
 # first-workflow
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
+        run: echo "Hello, World! 🚀"
